@@ -2,7 +2,7 @@
 
 Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning.
 
-**在线 / Live:** [English](https://context-time.pages.dev/) · [中文](https://context-time.pages.dev/zh)
+**在线 / Live:** [English](https://context-time.github.io/) · [中文](https://context-time.github.io/zh.html)
 
 ## 编辑 / Edit
 
