@@ -19,9 +19,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
 .language-switch a[aria-current=page]{color:var(--ink);font-weight:600}
 main>section{padding:30px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}
 main>.intro{padding:44px 0 30px}
-.event-label{margin:0 0 12px;font-size:12px;letter-spacing:.045em;color:var(--accent)}
-h1{max-width:940px;margin:0;font-size:36px;line-height:1.24;letter-spacing:-.025em;font-weight:650}
-.subtitle{margin:12px 0 20px;color:#4e5969;font-size:19px;line-height:1.5}
+h1{max-width:940px;margin:0 0 20px;font-size:36px;line-height:1.24;letter-spacing:-.025em;font-weight:650;text-wrap:balance}
 .event-details{display:flex;flex-wrap:wrap;gap:4px 22px;margin:0;color:var(--muted);font-size:13px}
 h2{margin:0 0 17px;font-size:22px;line-height:1.35;font-weight:600;letter-spacing:-.02em}
 p{margin:0 0 12px}
@@ -66,13 +64,12 @@ strong{font-weight:600}
 .site-footer{display:flex;justify-content:space-between;gap:16px;padding-block:24px 32px;font-size:11px;color:var(--muted)}
 .site-footer div{display:flex;gap:20px}
 html[lang=zh-CN] h1{font-size:34px;line-height:1.45;letter-spacing:.01em}
-html[lang=zh-CN] .subtitle{font-size:18px}
 html[lang=zh-CN] .research-summary{font-size:13px}
 @media(max-width:760px){
   .container,.header-inner{width:calc(100% - 40px)}
   .header-inner{gap:18px;flex-wrap:wrap;padding-block:16px}
   .brand{font-size:14px}.nav-links{gap:17px;font-size:12px}.language-switch{font-size:11px}
-  main>.intro{padding-top:30px}h1{font-size:30px}.subtitle{font-size:17px}
+  main>.intro{padding-top:30px}h1{font-size:30px}
   .speaker-grid{gap:22px 26px;grid-template-columns:repeat(3,minmax(0,1fr))}
   .research-groups{gap:22px 26px}
   .program th:first-child{width:110px}.program th:last-child{width:125px}
@@ -82,7 +79,7 @@ html[lang=zh-CN] .research-summary{font-size:13px}
   .header-inner{justify-content:space-between;gap:12px}
   .nav-links{order:3;width:100%;margin:0;gap:24px}
   main>section{padding-block:25px}main>.intro{padding-bottom:25px}
-  h1{font-size:28px}.subtitle{font-size:16px}.event-details{flex-direction:column;gap:2px;font-size:12px}
+  h1{font-size:28px}.event-details{flex-direction:column;gap:2px;font-size:12px}
   h2{font-size:20px;margin-bottom:16px}
   body{font-size:14px}
   .speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 24px}
@@ -102,6 +99,5 @@ html[lang=zh-CN] .research-summary{font-size:13px}
   .schedule-note{font-size:11px}.schedule-note a{margin-left:0;display:block;margin-top:4px}
   .materials p a{margin-left:0;display:block;margin-top:4px}
   html[lang=zh-CN] h1{font-size:27px}
-  html[lang=zh-CN] .subtitle{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

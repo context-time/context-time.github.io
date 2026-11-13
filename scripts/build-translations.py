@@ -15,11 +15,11 @@ for asset in ['style.css', 'content.js', 'app.js', 'research-data.js', 'research
 (root / 'index.html').write_text(source)
 translations = {
     '<html lang="en">': '<html lang="zh-CN">',
-    'ICDM 2026 Tutorial: Context-Aware Time Series Forecasting with LLMs. November 15, 2026, Shenyang, China.': 'ICDM 2026 教程：基于大语言模型的上下文感知时间序列预测。2026 年 11 月 15 日，中国沈阳。',
-    'Context-Aware Time Series Forecasting with LLMs': '基于大语言模型的上下文感知时间序列预测',
+    'ICDM 2026 Tutorial: Context-Aware Time Series Forecasting with LLMs. November 15, 2026, Shenyang, China.': 'ICDM 2026 教程：大模型驱动的情境感知时间序列预测。2026 年 11 月 15 日，中国沈阳。',
+    'Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning': '大模型驱动的情境感知时间序列预测：从模式识别到认知推理',
+    'Context-Aware Time Series Forecasting with LLMs': '大模型驱动的情境感知时间序列预测',
     'From Pattern Recognition to Cognitive Reasoning': '从模式识别到认知推理',
     'ICDM 2026 Tutorial': 'ICDM 2026 教程',
-    'Industrial Tutorial 6': '产业教程 6',
     'Skip to content': '跳至正文',
     'Main navigation': '主导航',
     'Page language': '页面语言',
