@@ -15,8 +15,7 @@ Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cog
 | `dist/index.html` | 英文介绍 / English text |
 | `dist/zh.html` | 中文介绍 / Chinese text |
 | `dist/content.js` | 讲者与日程 / Speakers and schedule |
-| `dist/research-data.js` | 论文、链接与中英文简介 / Research entries, links, and bilingual summaries |
-| `dist/assets/` | 讲者照片与研究配图 / Portraits and research figures |
+| `dist/assets/` | 讲者照片、会议标志与日历文件 / Portraits, conference logo, and calendar files |
 | `dist/style.css` | 页面样式 / Page styling |
 
 英文、中文页面可以分别修改。若使用 `python3 scripts/build-translations.py` 生成中文页，请同时更新脚本中的翻译；该命令会覆盖 `dist/zh.html`。 / The two pages can be edited separately. The optional translation script overwrites `dist/zh.html`; update its translation map when using it.

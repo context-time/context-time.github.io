@@ -28,15 +28,11 @@
       make('p', 'speaker-affiliation', chinese ? speaker.affiliationZh : speaker.affiliation));
     document.querySelector('#speaker-grid').append(card);
   }
+  const program = document.querySelector('#program-topics');
   data.sessions.forEach((session, index) => {
-    const row = make('tr');
-    row.id = `session-${index + 1}`;
-    const presenter = make('td', 'presenter');
-    const link = make('a', '', chinese ? session.presenterZh : session.presenter);
-    link.href = `#${session.speaker}`;
-    presenter.append(link);
-    row.append(make('td', 'time', session.time), make('td', '', chinese ? session.titleZh : session.title), presenter);
-    document.querySelector('#program-body').append(row);
+    const topic = make('li', '', chinese ? session.titleZh : session.title);
+    topic.id = `session-${index + 1}`;
+    program.append(topic);
   });
   document.querySelectorAll('.language-switch a').forEach(link => {
     link.addEventListener('click', () => {

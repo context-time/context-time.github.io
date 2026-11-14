@@ -4,54 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="ICDM 2026 Tutorial: Context-Aware Time Series Forecasting with LLMs. November 15, 2026, Shenyang, China.">
-  <meta property="og:title" content="Context-Aware Time Series Forecasting with LLMs · ICDM 2026">
-  <meta property="og:description" content="From Pattern Recognition to Cognitive Reasoning">
+  <meta name="description" content="Tutorial overview, practical takeaways, and references for the ICDM 2026 tutorial on context-aware time series forecasting with LLMs.">
+  <meta property="og:title" content="Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning · ICDM 2026">
+  <meta property="og:description" content="November 15, 2026, Shenyang, China.">
   <meta property="og:type" content="website">
-  <title>Context-Aware Time Series Forecasting with LLMs | ICDM 2026 Tutorial</title>
+  <title>Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning | ICDM 2026 Tutorial</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=fd93a1baf7">
+  <link rel="stylesheet" href="style.css?v=698c83ded6">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
-  <script src="content.js?v=07cfff73f8" defer></script>
-  <script src="app.js?v=675fbc0ae0" defer></script>
-  <script src="research-data.js?v=3accad0c59" defer></script>
-  <script src="research.js?v=b023f75d5e" defer></script>
+  <script src="content.js?v=8ffb9fde93" defer></script>
+  <script src="app.js?v=773f0beb01" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#overview">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#home">ICDM 2026 Tutorial</a>
-      <nav class="nav-links" aria-label="Main navigation"><a href="#overview">Overview</a><a href="#speakers">Speakers</a><a href="#schedule">Program</a><a href="#research">Research</a></nav>
-      <div class="language-switch" aria-label="Page language"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a><span>/</span><a href="index.html" lang="en" hreflang="en" aria-current="page" aria-label="English version">EN</a></div>
+      <a class="brand" href="#home">
+        <img src="assets/icdm-2026-logo.png" width="400" height="146" alt="ICDM 2026 Tutorial">
+      </a>
+      <nav class="nav-links" aria-label="Main navigation"><a href="#takeaways">Takeaways</a><a href="#schedule">Program</a><a href="#speakers">Team</a><a href="#references">References</a></nav>
+      <div class="language-switch" aria-label="Page language"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a><a href="index.html" lang="en" hreflang="en" aria-current="page" aria-label="English version">EN</a></div>
     </div>
   </header>
   <main class="container">
     <section class="intro" id="home" aria-labelledby="tutorial-title">
       <h1 id="tutorial-title">Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning</h1>
-      <p class="event-details"><span>November 15, 2026</span><span>10:10–12:10 · UTC+8</span><span>Grand Ballroom 1 · Shenyang, China</span></p>
+      <p class="event-details"><time datetime="2026-11-15">November 15, 2026</time><span>10:10–12:10 · UTC+8</span><span>Grand Ballroom 1 · <a href="https://icdm2026.neu.edu.cn/Venue/list.htm">Wanda Vista Shenyang</a></span><a href="assets/tutorial.ics" download>Add to calendar</a></p>
     </section>
     <section id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">Overview</h2>
-      <p>This tutorial explores how large language models bring context and reasoning to time series forecasting. We cover <strong>multimodal understanding</strong>, <strong>reasoning over predictive evidence</strong>, and <strong>agentic interaction with tools and environments</strong>, with applications in energy, traffic, industry, and science.</p>
+      <div class="overview-layout">
+        <div class="overview-copy">
+          <p>This tutorial explores advances in context-aware time series forecasting with large language models, moving beyond historical pattern recognition toward context-grounded cognitive reasoning. Real-world forecasts depend on temporal patterns, external conditions, events, domain knowledge, and system states. Using context as <strong>predictive evidence</strong> starts with evaluating what additional features tell us. <strong>What evidence matters, what evidence can we trust, and how can we verify its influence on the future?</strong> The tutorial approaches this question through multimodal semantic understanding, slow-thinking reasoning over evidence, and agentic interaction with tools and environments. It discusses applications in electricity load, renewable power, traffic, industry, and scientific forecasting, and highlights open challenges and future directions.</p>
+        </div>
+        <figure class="forecast-example" aria-labelledby="forecast-title">
+          <h3 id="forecast-title">Forecasting tomorrow’s electricity demand</h3>
+          <p class="forecast-scenario">A grid operator forecasts tomorrow’s electricity demand for the same region under two scenarios. Both forecasts start from the same observed demand.</p>
+          <div class="forecast-plot">
+            <div class="forecast-phases" aria-hidden="true">
+              <span>Past demand</span><span>Tomorrow’s forecast</span>
+            </div>
+            <span class="forecast-axis" aria-hidden="true">Electricity demand</span>
+            <img src="assets/context-forecast.png?v=2" width="1000" height="460" alt="Three forecasts start from the same observed electricity demand. Demand rises on a hot workday, stays roughly flat in the history-only forecast, and falls on a mild-weather holiday.">
+          </div>
+          <ul class="forecast-legend">
+            <li class="legend-workday"><span><strong>Hot workday:</strong> higher demand as cooling use rises.</span></li>
+            <li class="legend-baseline"><span><strong>History only:</strong> roughly flat in this example.</span></li>
+            <li class="legend-holiday"><span><strong>Mild holiday:</strong> lower demand as businesses use less electricity.</span></li>
+          </ul>
+          <figcaption>Illustrative forecasts with synthetic data.</figcaption>
+        </figure>
+      </div>
     </section>
-    <section id="speakers" aria-labelledby="speakers-title">
-      <h2 id="speakers-title">Speakers</h2>
-      <div class="speaker-grid" id="speaker-grid"></div>
+    <section id="takeaways" aria-labelledby="takeaways-title">
+      <h2 id="takeaways-title">How can LLMs use context for forecasting?</h2>
+      <p class="takeaway-intro">Context-aware forecasting involves three connected capabilities: integrating contextual information, reasoning with predictive evidence, and adaptively acquiring additional context when needed.</p>
+      <ol class="takeaway-list">
+        <li>
+          <h3>How can we integrate context?</h3>
+          <p class="takeaway-label">Multimodal Context Integration</p>
+          <p>Connect historical observations with external information, such as weather forecasts, event reports, calendars, and domain knowledge. The challenge is to understand heterogeneous context, align it with the prediction target and horizon, and combine it with temporal patterns—not simply append more inputs.</p>
+        </li>
+        <li>
+          <h3>How can we reason with contextual evidence?</h3>
+          <p class="takeaway-label">Evidence-Grounded Reasoning</p>
+          <p>Identify predictive evidence within the available context and reason about how it may shape future dynamics. This involves assessing the direction, magnitude, and timing of potential effects, weighing competing evidence, and revising forecast hypotheses while accounting for uncertainty.</p>
+        </li>
+        <li>
+          <h3>How can we acquire context adaptively?</h3>
+          <p class="takeaway-label">Adaptive Context Acquisition</p>
+          <p>Determine whether the available evidence is sufficient and what additional information could resolve uncertainty. A forecasting agent can selectively retrieve information, call tools, or request input, then update its reasoning and forecast. Acquisition should respect forecast-time availability and stop when further information is unlikely to justify its cost.</p>
+        </li>
+      </ol>
     </section>
     <section id="schedule" aria-labelledby="schedule-title">
       <h2 id="schedule-title">Program</h2>
-      <table class="program"><caption class="sr-only">Tutorial program, November 15, China Standard Time</caption><thead><tr><th scope="col">Time</th><th scope="col">Topic</th><th scope="col">Presenter</th></tr></thead><tbody id="program-body"></tbody></table>
-      <p class="schedule-note">All times are China Standard Time (UTC+8). <a href="assets/tutorial.ics" download>Add to calendar</a></p>
+      <ul class="program-topics" id="program-topics"></ul>
     </section>
-    <section id="research" aria-labelledby="research-title">
-      <h2 id="research-title">Selected Research</h2>
-      <div id="research-grid"></div>
+    <section id="speakers" aria-labelledby="speakers-title">
+      <h2 id="speakers-title">Tutorial Team</h2>
+      <div class="speaker-grid" id="speaker-grid"></div>
     </section>
-    <section class="materials" id="materials" aria-labelledby="materials-title">
-      <h2 id="materials-title">Materials</h2>
-      <p>Slides: coming soon. <a href="https://icdm2026.neu.edu.cn/Tutorials/list.htm" target="_blank" rel="noopener noreferrer">Official tutorial listing</a></p>
+    <section id="materials" aria-labelledby="references">
+      <h2 id="references">References</h2>
+      <ol class="references">
+        <li lang="en">
+          Mingyue Cheng, Zhiding Liu, Xiaoyu Tao, Qi Liu*, Jintao Zhang, Tingyue Pan, Shilong Zhang, Panjing He, Xiaohan Zhang, Daoyu Wang, Jiahao Wang, Enhong Chen.
+          <strong>A Comprehensive Survey of Time Series Forecasting: Concepts, Challenges, and Future Directions</strong>.
+          <em>IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE)</em>, 38(12), 7853–7872, 2026.
+          <span class="reference-links"><a href="https://doi.org/10.1109/TKDE.2026.3736707">IEEE Xplore</a> <a href="https://ustcagi.github.io/publication/cheng2025comprehensive/">Author page</a> <a href="https://github.com/USTCAGI/Awesome-Papers-Time-Series-Forecasting">Paper list</a></span>
+          <p class="reference-note" lang="en">Start here for the main forecasting problems and a taxonomy of forecasting methods.</p>
+        </li>
+        <li lang="en">
+          Xiaoyu Tao, Mingyue Cheng, Ze Guo, Bokai Pan, Qi Liu, Shijin Wang, Enhong Chen.
+          <strong>CastClaw: A Human-in-the-Loop Autonomous Agent for Industry Time Series Forecasting</strong>.
+          <em>IEEE ICDM 2026 Demo Track</em>.
+          <span class="reference-links"><a href="https://icdm2026.neu.edu.cn/PosterwDemo/list.htm#demos">Demo program</a> <a href="https://arxiv.org/abs/2608.30976v1">Preprint v1</a> <a href="https://github.com/ustc-time-series/CastClaw">Code</a></span>
+          <p class="reference-note" lang="en">See how a forecasting agent uses tools, checks candidate forecasts, and asks users for feedback.</p>
+        </li>
+        <li lang="en">
+          Xiaoyu Tao, Shilong Zhang, Mingyue Cheng, Daoyu Wang, Tingyue Pan, Bokai Pan, Changqing Zhang, Shijin Wang.
+          <strong>From Values to Tokens: An LLM-Driven Framework for Context-Aware Time Series Forecasting via Symbolic Discretization</strong> (TokenCast).
+          <em>IJCAI 2026</em>, 3043–3051.
+          <span class="reference-links"><a href="https://doi.org/10.24963/ijcai.2026/338">Proceedings</a> <a href="https://ijcai.org/proceedings/2026/0338.pdf">PDF</a> <a href="https://github.com/ustc-time-series/TokenCast">Code</a></span>
+          <p class="reference-note" lang="en">See how an LLM combines discrete time series tokens with text context to make forecasts.</p>
+        </li>
+      </ol>
     </section>
   </main>
   <footer class="site-footer container"><span>ICDM 2026 · Shenyang</span><div><a href="https://icdm2026.neu.edu.cn/" target="_blank" rel="noopener noreferrer">Conference</a><a href="https://ustcagi.github.io/people/" target="_blank" rel="noopener noreferrer">Contact</a></div></footer>

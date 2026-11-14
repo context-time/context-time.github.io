@@ -4,54 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="ICDM 2026 教程：大模型驱动的情境感知时间序列预测。2026 年 11 月 15 日，中国沈阳。">
-  <meta property="og:title" content="大模型驱动的情境感知时间序列预测 · ICDM 2026">
-  <meta property="og:description" content="从模式识别到认知推理">
+  <meta name="description" content="ICDM 2026 教程「大模型驱动的情境感知时间序列预测」的简介、实践要点和参考文献。">
+  <meta property="og:title" content="大模型驱动的情境感知时间序列预测：从模式识别到认知推理 · ICDM 2026">
+  <meta property="og:description" content="2026 年 11 月 15 日，中国沈阳。">
   <meta property="og:type" content="website">
-  <title>大模型驱动的情境感知时间序列预测 | ICDM 2026 教程</title>
+  <title>大模型驱动的情境感知时间序列预测：从模式识别到认知推理 | ICDM 2026 教程</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=fd93a1baf7">
+  <link rel="stylesheet" href="style.css?v=698c83ded6">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
-  <script src="content.js?v=07cfff73f8" defer></script>
-  <script src="app.js?v=675fbc0ae0" defer></script>
-  <script src="research-data.js?v=3accad0c59" defer></script>
-  <script src="research.js?v=b023f75d5e" defer></script>
+  <script src="content.js?v=8ffb9fde93" defer></script>
+  <script src="app.js?v=773f0beb01" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#overview">跳至正文</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#home">ICDM 2026 教程</a>
-      <nav class="nav-links" aria-label="主导航"><a href="#overview">简介</a><a href="#speakers">讲者</a><a href="#schedule">日程</a><a href="#research">研究</a></nav>
-      <div class="language-switch" aria-label="页面语言"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-current="page" aria-label="中文版">中文</a><span>/</span><a href="index.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a></div>
+      <a class="brand" href="#home">
+        <img src="assets/icdm-2026-logo.png" width="400" height="146" alt="ICDM 2026 教程">
+      </a>
+      <nav class="nav-links" aria-label="主导航"><a href="#takeaways">要点</a><a href="#schedule">日程</a><a href="#speakers">教程团队</a><a href="#references">参考文献</a></nav>
+      <div class="language-switch" aria-label="页面语言"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-current="page" aria-label="中文版">中文</a><a href="index.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a></div>
     </div>
   </header>
   <main class="container">
     <section class="intro" id="home" aria-labelledby="tutorial-title">
-      <h1 id="tutorial-title">大模型驱动的情境感知时间序列预测：从模式识别到认知推理</h1>
-      <p class="event-details"><span>2026 年 11 月 15 日</span><span>10:10–12:10 · UTC+8</span><span>Grand Ballroom 1 · 中国沈阳</span></p>
+      <h1 id="tutorial-title"><span>大模型驱动的</span><span>情境感知</span><span>时间序列预测：</span><span>从模式识别到认知推理</span></h1>
+      <p class="event-details"><time datetime="2026-11-15">2026 年 11 月 15 日</time><span>10:10–12:10 · UTC+8</span><span>Grand Ballroom 1 · <a href="https://icdm2026.neu.edu.cn/Venue/list.htm">沈阳富力万达文华酒店</a></span><a href="assets/tutorial-zh.ics" download>添加到日历</a></p>
     </section>
     <section id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">简介</h2>
-      <p>本教程介绍大语言模型如何为时间序列预测引入上下文与推理能力，围绕<strong>多模态理解</strong>、<strong>基于预测证据的推理</strong>以及<strong>智能体与工具和环境的交互</strong>展开，并讨论能源、交通、工业与科学领域的应用。</p>
+      <div class="overview-layout">
+        <div class="overview-copy">
+          <p>本教程介绍大模型驱动的情境感知时间序列预测的研究进展，探讨如何从历史模式识别走向基于情境的认知推理。现实中的预测受到时间规律、外部条件、事件、领域知识和系统状态的共同影响。要把附加特征用作<strong>预测证据</strong>，需要先判断它们能说明什么。<strong>哪些证据与预测有关，哪些证据值得信赖，又该怎样验证它们对未来的影响？</strong>教程从多模态语义理解、基于证据的慢思考推理，以及智能体与工具和环境的交互三个方面展开，讨论电力负荷、可再生能源发电、交通、工业和科学预测中的应用，以及尚待解决的挑战与研究方向。</p>
+        </div>
+        <figure class="forecast-example" aria-labelledby="forecast-title">
+          <h3 id="forecast-title">预测次日用电需求</h3>
+          <p class="forecast-scenario">电网调度员要预测同一地区次日的用电需求。两种情境都以同一段历史负荷为起点。</p>
+          <div class="forecast-plot">
+            <div class="forecast-phases" aria-hidden="true">
+              <span>历史负荷</span><span>次日预测</span>
+            </div>
+            <span class="forecast-axis" aria-hidden="true">电力负荷</span>
+            <img src="assets/context-forecast.png?v=2" width="1000" height="460" alt="三条预测曲线基于同一段历史电力负荷。高温工作日的预测负荷上升，仅依据历史的预测基本持平，天气温和的假日预测负荷下降。">
+          </div>
+          <ul class="forecast-legend">
+            <li class="legend-workday"><span><strong>高温工作日：</strong>制冷用电增加，预测负荷上升。</span></li>
+            <li class="legend-baseline"><span><strong>仅用历史数据：</strong>本例中预测负荷基本持平。</span></li>
+            <li class="legend-holiday"><span><strong>天气温和的假日：</strong>商业用电减少，预测负荷下降。</span></li>
+          </ul>
+          <figcaption>曲线为合成数据示意。</figcaption>
+        </figure>
+      </div>
     </section>
-    <section id="speakers" aria-labelledby="speakers-title">
-      <h2 id="speakers-title">讲者</h2>
-      <div class="speaker-grid" id="speaker-grid"></div>
+    <section id="takeaways" aria-labelledby="takeaways-title">
+      <h2 id="takeaways-title">大模型如何利用情境信息进行预测？</h2>
+      <p class="takeaway-intro">情境感知预测涉及三项相互关联的能力：整合情境信息、依据预测证据进行推理，以及在需要时自适应地获取更多情境信息。</p>
+      <ol class="takeaway-list">
+        <li>
+          <h3>如何整合情境信息？</h3>
+          <p class="takeaway-label">多模态情境整合</p>
+          <p>将历史观测与天气预报、事件报道、日历和领域知识等外部信息联系起来。整合的关键在于理解不同来源和形式的情境信息，将它们与预测目标和预测时段对齐，再结合时间序列的变化规律进行建模。</p>
+        </li>
+        <li>
+          <h3>如何依据情境证据进行推理？</h3>
+          <p class="takeaway-label">基于证据的推理</p>
+          <p>从可用的情境信息中识别与预测有关的证据，推断它们可能怎样影响未来走势。具体来说，需要判断潜在影响的方向、幅度和时间，权衡指向不同结论的证据，并在考虑不确定性的同时修正预测假设。</p>
+        </li>
+        <li>
+          <h3>如何自适应地获取情境信息？</h3>
+          <p class="takeaway-label">自适应情境获取</p>
+          <p>判断已有证据是否充分，以及哪些补充信息可以减少不确定性。预测智能体可以按需检索资料、调用工具或向用户询问，再更新推理和预测。获取的信息应在作出预测时可得。当继续搜集信息的预期收益不足以抵偿成本时，就应停止。</p>
+        </li>
+      </ol>
     </section>
     <section id="schedule" aria-labelledby="schedule-title">
       <h2 id="schedule-title">日程</h2>
-      <table class="program"><caption class="sr-only">教程日程，11 月 15 日，北京时间</caption><thead><tr><th scope="col">时间</th><th scope="col">主题</th><th scope="col">讲者</th></tr></thead><tbody id="program-body"></tbody></table>
-      <p class="schedule-note">所有时间均为北京时间（UTC+8）。 <a href="assets/tutorial-zh.ics" download>添加到日历</a></p>
+      <ul class="program-topics" id="program-topics"></ul>
     </section>
-    <section id="research" aria-labelledby="research-title">
-      <h2 id="research-title">代表研究</h2>
-      <div id="research-grid"></div>
+    <section id="speakers" aria-labelledby="speakers-title">
+      <h2 id="speakers-title">教程团队</h2>
+      <div class="speaker-grid" id="speaker-grid"></div>
     </section>
-    <section class="materials" id="materials" aria-labelledby="materials-title">
-      <h2 id="materials-title">资料</h2>
-      <p>课件：即将发布。 <a href="https://icdm2026.neu.edu.cn/Tutorials/list.htm" target="_blank" rel="noopener noreferrer">会议官方教程介绍</a></p>
+    <section id="materials" aria-labelledby="references">
+      <h2 id="references">参考文献</h2>
+      <ol class="references">
+        <li lang="en">
+          Mingyue Cheng, Zhiding Liu, Xiaoyu Tao, Qi Liu*, Jintao Zhang, Tingyue Pan, Shilong Zhang, Panjing He, Xiaohan Zhang, Daoyu Wang, Jiahao Wang, Enhong Chen.
+          <strong>A Comprehensive Survey of Time Series Forecasting: Concepts, Challenges, and Future Directions</strong>.
+          <em>IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE)</em>, 38(12), 7853–7872, 2026.
+          <span class="reference-links"><a href="https://doi.org/10.1109/TKDE.2026.3736707">IEEE Xplore</a> <a href="https://ustcagi.github.io/publication/cheng2025comprehensive/">作者页面</a> <a href="https://github.com/USTCAGI/Awesome-Papers-Time-Series-Forecasting">论文目录</a></span>
+          <p class="reference-note" lang="zh-CN">从这篇综述了解时间序列预测的主要问题与方法分类。</p>
+        </li>
+        <li lang="en">
+          Xiaoyu Tao, Mingyue Cheng, Ze Guo, Bokai Pan, Qi Liu, Shijin Wang, Enhong Chen.
+          <strong>CastClaw: A Human-in-the-Loop Autonomous Agent for Industry Time Series Forecasting</strong>.
+          <em>IEEE ICDM 2026 Demo Track</em>.
+          <span class="reference-links"><a href="https://icdm2026.neu.edu.cn/PosterwDemo/list.htm#demos">演示议程</a> <a href="https://arxiv.org/abs/2608.30976v1">预印本 v1</a> <a href="https://github.com/ustc-time-series/CastClaw">Code</a></span>
+          <p class="reference-note" lang="zh-CN">了解预测智能体如何调用工具、检验候选预测并征求用户反馈。</p>
+        </li>
+        <li lang="en">
+          Xiaoyu Tao, Shilong Zhang, Mingyue Cheng, Daoyu Wang, Tingyue Pan, Bokai Pan, Changqing Zhang, Shijin Wang.
+          <strong>From Values to Tokens: An LLM-Driven Framework for Context-Aware Time Series Forecasting via Symbolic Discretization</strong> (TokenCast).
+          <em>IJCAI 2026</em>, 3043–3051.
+          <span class="reference-links"><a href="https://doi.org/10.24963/ijcai.2026/338">Proceedings</a> <a href="https://ijcai.org/proceedings/2026/0338.pdf">PDF</a> <a href="https://github.com/ustc-time-series/TokenCast">Code</a></span>
+          <p class="reference-note" lang="zh-CN">了解大模型如何结合离散的时序符号与文本情境来做预测。</p>
+        </li>
+      </ol>
     </section>
   </main>
   <footer class="site-footer container"><span>ICDM 2026 · 沈阳</span><div><a href="https://icdm2026.neu.edu.cn/" target="_blank" rel="noopener noreferrer">会议官网</a><a href="https://ustcagi.github.io/people/" target="_blank" rel="noopener noreferrer">联系团队</a></div></footer>
