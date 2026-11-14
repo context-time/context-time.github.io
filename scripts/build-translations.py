@@ -94,6 +94,8 @@ translations = {
     '>Outline<': '>提纲<',
     '>References<': '>参考文献<',
     'Add to calendar': '添加到日历',
+    'href="slides.html"': 'href="slides-zh.html"',
+    'Preview tutorial slides': '在线预览课件',
     'assets/tutorial.ics': 'assets/tutorial-zh.ics',
     '>Conference<': '>会议官网<',
     '>Contact<': '>联系团队<',
