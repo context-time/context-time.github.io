@@ -3,42 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Read the ICDM 2026 tutorial slides on context-aware time series forecasting with LLMs.">
-  <title>Tutorial Slides | ICDM 2026</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="slides.css">
-  <link rel="alternate" hreflang="zh-CN" href="slides-zh.html">
-  <script src="slides.js" defer></script>
+  <title>Open the tutorial slide preview</title>
+  <script>
+    const homepage = new URL("./", location.href);
+    homepage.search = location.search;
+    homepage.hash = 'slides';
+    location.replace(homepage);
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container reader-header">
-      <a href="index.html">← Tutorial homepage</a>
-      <nav class="language-switch" aria-label="Page language">
-        <a href="slides-zh.html" lang="zh-CN" hreflang="zh-CN" id="reader-language">中文</a>
-        <a href="slides.html" lang="en" hreflang="en" aria-current="page">EN</a>
-      </nav>
-    </div>
-  </header>
-  <main class="container reader">
-    <h1>Tutorial Slides</h1>
-    <form class="reader-controls" id="reader-controls" hidden>
-      <div class="reader-pagination">
-        <button type="button" id="reader-prev">Previous</button>
-        <label for="reader-page">Page</label>
-        <input id="reader-page" type="number" min="1" required inputmode="numeric" aria-describedby="reader-total">
-        <span id="reader-total"></span>
-        <button type="submit">Go</button>
-        <button type="button" id="reader-next">Next</button>
-      </div>
-      <button type="button" id="reader-zoom" aria-pressed="false">Zoom in</button>
-    </form>
-    <div class="reader-viewport" id="reader-viewport" role="region" aria-label="Slide preview" tabindex="0">
-      <canvas id="reader-slide" width="1920" height="1080" role="img" aria-label="Tutorial slide"></canvas>
-    </div>
-    <p id="reader-status" class="reader-status" role="status"></p>
-    <noscript><p>Enable JavaScript to read the slides.</p></noscript>
-  </main>
+  <p><a href="./#slides">Open the tutorial slide preview</a></p>
 </body>
 </html>

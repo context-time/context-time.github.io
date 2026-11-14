@@ -3,42 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="在线阅读 ICDM 2026 大模型驱动的情境感知时间序列预测教程课件。">
-  <title>教程课件 | ICDM 2026</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="slides.css">
-  <link rel="alternate" hreflang="en" href="slides.html">
-  <script src="slides.js" defer></script>
+  <title>打开教程课件预览</title>
+  <script>
+    const homepage = new URL("zh.html", location.href);
+    homepage.search = location.search;
+    homepage.hash = 'slides';
+    location.replace(homepage);
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container reader-header">
-      <a href="zh.html">← 教程首页</a>
-      <nav class="language-switch" aria-label="页面语言">
-        <a href="slides-zh.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">中文</a>
-        <a href="slides.html" lang="en" hreflang="en" id="reader-language">EN</a>
-      </nav>
-    </div>
-  </header>
-  <main class="container reader">
-    <h1>教程课件</h1>
-    <form class="reader-controls" id="reader-controls" hidden>
-      <div class="reader-pagination">
-        <button type="button" id="reader-prev">上一页</button>
-        <label for="reader-page">页码</label>
-        <input id="reader-page" type="number" min="1" required inputmode="numeric" aria-describedby="reader-total">
-        <span id="reader-total"></span>
-        <button type="submit">跳转</button>
-        <button type="button" id="reader-next">下一页</button>
-      </div>
-      <button type="button" id="reader-zoom" aria-pressed="false">放大</button>
-    </form>
-    <div class="reader-viewport" id="reader-viewport" role="region" aria-label="课件预览" tabindex="0">
-      <canvas id="reader-slide" width="1920" height="1080" role="img" aria-label="教程课件"></canvas>
-    </div>
-    <p id="reader-status" class="reader-status" role="status"></p>
-    <noscript><p>请启用 JavaScript 后阅读课件。</p></noscript>
-  </main>
+  <p><a href="zh.html#slides">打开教程课件预览</a></p>
 </body>
 </html>

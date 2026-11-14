@@ -11,10 +11,12 @@
   <title>Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning | ICDM 2026 Tutorial</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=9bff38cd2b">
+  <link rel="stylesheet" href="slides.css?v=39f79662e9">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
   <script src="content.js?v=8ffb9fde93" defer></script>
-  <script src="app.js?v=773f0beb01" defer></script>
+  <script src="app.js?v=0bb7652b25" defer></script>
+  <script src="slides.js?v=b18025ee39" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#overview">Skip to content</a>
@@ -30,7 +32,7 @@
   <main class="container">
     <section class="intro" id="home" aria-labelledby="tutorial-title">
       <h1 id="tutorial-title">Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning</h1>
-      <p class="event-details"><time datetime="2026-11-15">November 15, 2026</time><span>10:10–12:10 · UTC+8</span><span>Grand Ballroom 1 · <a href="https://icdm2026.neu.edu.cn/Venue/list.htm">Wanda Vista Shenyang</a></span><a href="assets/tutorial.ics" download>Add to calendar</a><a href="slides.html">Preview tutorial slides</a></p>
+      <p class="event-details"><time datetime="2026-11-15">November 15, 2026</time><span>10:10–12:10 · UTC+8</span><span>Grand Ballroom 1 · <a href="https://icdm2026.neu.edu.cn/Venue/list.htm">Wanda Vista Shenyang</a></span><a href="assets/tutorial.ics" download>Add to calendar</a><a href="#slides">Preview tutorial slides</a></p>
     </section>
     <section id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">Overview</h2>
@@ -85,6 +87,25 @@
     <section id="speakers" aria-labelledby="speakers-title">
       <h2 id="speakers-title">Tutorial Organizers</h2>
       <div class="speaker-grid" id="speaker-grid"></div>
+    </section>
+    <section class="reader" id="slides" aria-labelledby="slides-title">
+      <h2 id="slides-title">Tutorial Slides</h2>
+      <form class="reader-controls" id="reader-controls" hidden>
+        <div class="reader-pagination">
+          <button type="button" id="reader-prev">Previous</button>
+          <label for="reader-page">Page</label>
+          <input id="reader-page" type="number" min="1" required inputmode="numeric" aria-describedby="reader-total">
+          <span id="reader-total"></span>
+          <button type="submit">Go</button>
+          <button type="button" id="reader-next">Next</button>
+        </div>
+        <button type="button" id="reader-zoom" aria-pressed="false">Zoom in</button>
+      </form>
+      <div class="reader-viewport" id="reader-viewport" role="region" aria-label="Slide preview" tabindex="0">
+        <canvas id="reader-slide" width="1920" height="1080" role="img" aria-label="Tutorial slide"></canvas>
+      </div>
+      <p id="reader-status" class="reader-status" role="status"></p>
+      <noscript><p>Enable JavaScript to read the slides.</p></noscript>
     </section>
     <section id="materials" aria-labelledby="references">
       <h2 id="references">References</h2>

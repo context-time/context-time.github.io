@@ -1,8 +1,9 @@
 (() => {
+  const reader = document.querySelector('#slides');
   const total = 104;
   const isChinese = document.documentElement.lang === 'zh-CN';
   const copy = isChinese ? {
-    total: '共 104 页',
+    total: `共 ${total} 页`,
     page: (n) => `第 ${n} 页，共 ${total} 页`,
     loading: '正在加载课件…',
     error: '课件加载失败，请重试。',
@@ -28,17 +29,18 @@
   const previous = document.querySelector('#reader-prev');
   const next = document.querySelector('#reader-next');
   const zoom = document.querySelector('#reader-zoom');
-  const language = document.querySelector('#reader-language');
   let current = 1;
   let request = 0;
 
-  function show(page) {
+  function show(page, updateAddress = true) {
     current = Number.isInteger(page) ? Math.min(total, Math.max(1, page)) : 1;
     const id = ++request;
-    const url = new URL(window.location.href);
-    url.searchParams.set('page', current);
-    history.replaceState(null, '', url);
-    language.search = url.search;
+    if (updateAddress) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('page', current);
+      url.hash = reader.id;
+      history.replaceState(null, '', url);
+    }
     input.value = current;
     previous.disabled = current === 1;
     next.disabled = current === total;
@@ -100,5 +102,15 @@
     show(pages[event.key]);
   });
 
-  show(Number(new URLSearchParams(location.search).get('page')));
+  const initialPage = Number(new URLSearchParams(location.search).get('page'));
+  if (location.hash === '#slides' || !('IntersectionObserver' in window)) {
+    show(initialPage, false);
+  } else {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      observer.disconnect();
+      if (!request) show(initialPage, false);
+    }, { rootMargin: '250px' });
+    observer.observe(reader);
+  }
 })();

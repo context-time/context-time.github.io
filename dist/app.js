@@ -37,7 +37,13 @@
   document.querySelectorAll('.language-switch a').forEach(link => {
     link.addEventListener('click', () => {
       const target = new URL(link.href);
-      target.hash = window.location.hash;
+      const current = new URL(window.location.href);
+      target.hash = current.hash;
+      if (current.hash === '#slides' && current.searchParams.has('page')) {
+        target.searchParams.set('page', current.searchParams.get('page'));
+      } else {
+        target.searchParams.delete('page');
+      }
       link.href = target.href;
     });
   });
