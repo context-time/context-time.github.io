@@ -3,15 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>打开教程课件预览</title>
+  <title>教程首页</title>
   <script>
-    const homepage = new URL("zh.html", location.href);
-    homepage.search = location.search;
-    homepage.hash = 'slides';
-    location.replace(homepage);
+    location.replace(new URL("zh.html", location.href));
   </script>
 </head>
 <body>
-  <p><a href="zh.html#slides">打开教程课件预览</a></p>
+  <p><a href="zh.html">教程首页</a></p>
 </body>
 </html>

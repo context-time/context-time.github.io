@@ -10,7 +10,7 @@ import re
 
 root = Path(__file__).resolve().parents[1] / 'dist'
 source = (root / 'index.html').read_text()
-for asset in ['style.css', 'content.js', 'app.js', 'slides.css', 'slides.js']:
+for asset in ['style.css', 'content.js', 'app.js']:
     version = hashlib.sha256((root / asset).read_bytes()).hexdigest()[:10]
     source = re.sub(r'(?P<attr>href|src)="' + re.escape(asset) + r'(?:\?v=[^"]*)?"', lambda match: match.group('attr') + '="' + asset + '?v=' + version + '"', source)
 (root / 'index.html').write_text(source)
@@ -94,16 +94,6 @@ translations = {
     '>Outline<': '>提纲<',
     '>References<': '>参考文献<',
     'Add to calendar': '添加到日历',
-    'Preview tutorial slides': '在线预览课件',
-    '>Tutorial Slides<': '>教程课件<',
-    '>Previous<': '>上一页<',
-    '>Page<': '>页码<',
-    '>Go<': '>跳转<',
-    '>Next<': '>下一页<',
-    '>Zoom in<': '>放大<',
-    'aria-label="Slide preview"': 'aria-label="课件预览"',
-    'aria-label="Tutorial slide"': 'aria-label="教程课件"',
-    'Enable JavaScript to read the slides.': '请启用 JavaScript 后阅读课件。',
     'assets/tutorial.ics': 'assets/tutorial-zh.ics',
     '>Conference<': '>会议官网<',
     '>Contact<': '>联系团队<',

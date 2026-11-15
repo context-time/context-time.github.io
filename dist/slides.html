@@ -3,15 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open the tutorial slide preview</title>
+  <title>Tutorial homepage</title>
   <script>
-    const homepage = new URL("./", location.href);
-    homepage.search = location.search;
-    homepage.hash = 'slides';
-    location.replace(homepage);
+    location.replace(new URL("./", location.href));
   </script>
 </head>
 <body>
-  <p><a href="./#slides">Open the tutorial slide preview</a></p>
+  <p><a href="./">Tutorial homepage</a></p>
 </body>
 </html>
