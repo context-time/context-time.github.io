@@ -26,6 +26,8 @@ translations = {
     'Page language': '页面语言',
     'November 15, 2026': '2026 年 11 月 15 日',
     '>Wanda Vista Shenyang<': '>沈阳富力万达文华酒店<',
+    '>News<': '>动态<',
+    'The tutorial slides will be publicly available on this page soon.': '本教程的幻灯片即将在此页面公开。',
     (
         'This tutorial explores advances in context-aware time series forecasting with large language models, moving beyond '
         'historical pattern recognition toward context-grounded cognitive reasoning. Real-world forecasts depend on temporal '
