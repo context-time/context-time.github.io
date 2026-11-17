@@ -13,6 +13,7 @@ window.TUTORIAL = {
     {title:'Multimodal Semantic Understanding of Heterogeneous Context', titleZh:'异构情境的多模态语义理解'},
     {title:'Slow-Thinking Cognitive Reasoning over Predictive Evidence', titleZh:'基于预测证据的慢思考认知推理'},
     {title:'Agentic Autonomous Interaction with Tools and Environments', titleZh:'智能体与工具及环境的自主交互'},
+    {title:'Forecasting Benchmarks and Evaluation', titleZh:'预测基准与评测'},
     {title:'Real-World Applications, Open Problems & Future Directions', titleZh:'真实场景应用、开放问题与未来方向'}
   ]
 };
