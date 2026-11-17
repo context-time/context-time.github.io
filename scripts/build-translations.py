@@ -16,7 +16,7 @@ for asset in ['style.css', 'content.js', 'app.js']:
 (root / 'index.html').write_text(source)
 translations = {
     '<html lang="en">': '<html lang="zh-CN">',
-    'Tutorial overview, practical takeaways, and references for the ICDM 2026 tutorial on context-aware time series forecasting with LLMs.': 'ICDM 2026 教程「大模型驱动的情境感知时间序列预测」的简介、实践要点和参考文献。',
+    'Tutorial overview, case study, and references for the ICDM 2026 tutorial on context-aware time series forecasting with LLMs.': 'ICDM 2026 教程「大模型驱动的情境感知时间序列预测」的简介、案例和参考文献。',
     '>Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning</h1>': '><span>大模型驱动的</span><span>情境感知</span><span>时间序列预测：</span><span>从模式识别到认知推理</span></h1>',
     'Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning': '大模型驱动的情境感知时间序列预测：从模式识别到认知推理',
     'November 15, 2026, Shenyang, China.': '2026 年 11 月 15 日，中国沈阳。',
@@ -45,51 +45,44 @@ translations = {
         '应用，以及尚待解决的挑战与研究方向。'
     ),
     '>Overview<': '>简介<',
-    'Forecasting tomorrow’s electricity demand': '预测次日用电需求',
-    'A grid operator forecasts tomorrow’s electricity demand for the same region under two scenarios. Both forecasts start from the same observed demand.': '电网调度员要预测同一地区次日的用电需求。两种情境都以同一段历史负荷为起点。',
-    'Three forecasts start from the same observed electricity demand. Demand rises on a hot workday, stays roughly flat in the history-only forecast, and falls on a mild-weather holiday.': '三条预测曲线基于同一段历史电力负荷。高温工作日的预测负荷上升，仅依据历史的预测基本持平，天气温和的假日预测负荷下降。',
-    '>Past demand<': '>历史负荷<',
-    '>Tomorrow’s forecast<': '>次日预测<',
-    '>Electricity demand<': '>电力负荷<',
-    '<strong>Hot workday:</strong> higher demand as cooling use rises.': '<strong>高温工作日：</strong>制冷用电增加，预测负荷上升。',
-    '<strong>History only:</strong> roughly flat in this example.': '<strong>仅用历史数据：</strong>本例中预测负荷基本持平。',
-    '<strong>Mild holiday:</strong> lower demand as businesses use less electricity.': '<strong>天气温和的假日：</strong>商业用电减少，预测负荷下降。',
-    'Illustrative forecasts with synthetic data.': '曲线为合成数据示意。',
+    '>Same History, Different Futures<': '>相同历史，不同未来<',
+    'src="assets/same-history-different-futures.png" width="1200" height="790"': 'src="assets/same-history-different-futures-zh.png" width="1545" height="1018"',
+    'href="assets/same-history-different-futures.png"': 'href="assets/same-history-different-futures-zh.png"',
+    '>View full-size figure<': '>查看原图<',
+    '>Read the case as text<': '>阅读中文版案例说明<',
+    (
+        'Consider tomorrow’s electricity demand in one region. Both scenarios start from identical historical '
+        'observations and assume the same weekday conditions. Under normal weather, electricity demand may follow '
+        'a familiar daily pattern. During a heatwave, increased cooling demand can raise and prolong the afternoon peak.'
+    ): (
+        '以同一地区的次日用电需求为例，两种情境采用同一段历史观测，并假设次日均为普通工作日。天气正常时，'
+        '用电负荷可能延续常见的日内变化规律。热浪期间，制冷用电增加，下午的负荷峰值可能升高，高负荷时段也可能延长。'
+    ),
+    '>Scenario A — Normal Weekday<': '>情境 A · 正常天气下的工作日<',
+    '>Scenario B — Heatwave Weekday<': '>情境 B · 热浪下的工作日<',
+    '<strong>27°C</strong> maximum temperature': '最高气温 <strong>27°C</strong>',
+    '<strong>37°C</strong> maximum temperature': '最高气温 <strong>37°C</strong>',
+    'Normal cooling demand and a familiar daily load pattern.': '制冷需求正常，负荷延续常见的日内变化规律。',
+    'Increased cooling demand and a higher, potentially longer afternoon peak.': '制冷需求增加，下午峰值更高，高负荷时段也可能延长。',
+    (
+        'Synthetic electricity demand forecasts share the same history, region, and weekday. '
+        'The orange 37°C heatwave curve reaches a higher afternoon peak than the blue 27°C normal weekday curve. '
+        'The figure asks which evidence matters, how it shapes the forecast, and whether the forecast is plausible.'
+    ): '图中用合成数据展示同一地区和工作日条件下，从同一段历史负荷出发的两条预测。37°C 热浪情境的橙色曲线比 27°C 正常天气情境的蓝色曲线有更高的下午峰值。图末提出三个问题：哪些证据重要、它们如何影响预测，以及预测结果是否合理。',
+    'Illustrative forecasts based on synthetic data.': '预测曲线基于合成数据，仅用于示意。',
+    '>EIA analysis of cooling demand during a heatwave<': '>EIA 对热浪期间制冷用电的分析<',
+    '>Three Key Questions<': '>三个关键问题<',
+    (
+        'The forecasting challenge is to identify relevant evidence, explain how it changes the load curve, '
+        'and verify that the predicted response is reasonable.'
+    ): '预测的难点在于识别相关证据，解释它如何影响负荷曲线，并验证预测结果是否合理。',
+    '>Evidence — What matters?<': '>证据 · 什么信息重要？<',
+    'Which external information is relevant and trustworthy for forecasting?': '哪些外部信息与预测相关，且值得信赖？',
+    '>Reasoning — Why and how?<': '>推理 · 影响从何而来？<',
+    'How does contextual evidence influence the direction, magnitude, and timing of future changes?': '情境证据如何影响未来变化的方向、幅度和时间？',
+    '>Verification — Can we trust it?<': '>验证 · 预测能否信赖？<',
+    'Does the predicted response agree with the available evidence and known system constraints?': '预测结果是否符合现有证据和已知的系统约束？',
     '>Homepage<': '>首页<',
-    '>Takeaways<': '>要点<',
-    'How can LLMs use context for forecasting?': '大模型如何利用情境信息进行预测？',
-    'Context-aware forecasting involves three connected capabilities: integrating contextual information, reasoning with predictive evidence, and adaptively acquiring additional context when needed.': '情境感知预测涉及三项相互关联的能力：整合情境信息、依据预测证据进行推理，以及在需要时自适应地获取更多情境信息。',
-    'How can we integrate context?': '如何整合情境信息？',
-    '>Multimodal Context Integration<': '>多模态情境整合<',
-    (
-        'Connect historical observations with external information, such as weather forecasts, event reports, calendars, '
-        'and domain knowledge. The challenge is to understand heterogeneous context, align it with the prediction target '
-        'and horizon, and combine it with temporal patterns—not simply append more inputs.'
-    ): (
-        '将历史观测与天气预报、事件报道、日历和领域知识等外部信息联系起来。整合的关键在于理解不同来源和形式的情境信息，'
-        '将它们与预测目标和预测时段对齐，再结合时间序列的变化规律进行建模。'
-    ),
-    'How can we reason with contextual evidence?': '如何依据情境证据进行推理？',
-    '>Evidence-Grounded Reasoning<': '>基于证据的推理<',
-    (
-        'Identify predictive evidence within the available context and reason about how it may shape future dynamics. '
-        'This involves assessing the direction, magnitude, and timing of potential effects, weighing competing evidence, '
-        'and revising forecast hypotheses while accounting for uncertainty.'
-    ): (
-        '从可用的情境信息中识别与预测有关的证据，推断它们可能怎样影响未来走势。具体来说，需要判断潜在影响的方向、幅度和时间，'
-        '权衡指向不同结论的证据，并在考虑不确定性的同时修正预测假设。'
-    ),
-    'How can we acquire context adaptively?': '如何自适应地获取情境信息？',
-    '>Adaptive Context Acquisition<': '>自适应情境获取<',
-    (
-        'Determine whether the available evidence is sufficient and what additional information could resolve uncertainty. '
-        'A forecasting agent can selectively retrieve information, call tools, or request input, then update its reasoning '
-        'and forecast. Acquisition should respect forecast-time availability and stop when further information is unlikely '
-        'to justify its cost.'
-    ): (
-        '判断已有证据是否充分，以及哪些补充信息可以减少不确定性。预测智能体可以按需检索资料、调用工具或向用户询问，'
-        '再更新推理和预测。获取的信息应在作出预测时可得。当继续搜集信息的预期收益不足以抵偿成本时，就应停止。'
-    ),
     '>Tutorial Organizers<': '>教程组织者<',
     '>Organizers<': '>组织者<',
     '>Tutorial Outline<': '>教程提纲<',

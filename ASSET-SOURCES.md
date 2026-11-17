@@ -12,6 +12,8 @@ The tutorial homepage lists six team members and five program topics.
 | `dist/assets/enhong-chen.jpg` | Portrait and title from the [USTC faculty profile](https://cs.ustc.edu.cn/2020/0806/c23235a460077/page.htm). |
 | `dist/assets/icdm-2026-logo.png` | [Official ICDM 2026 logo](https://icdm2026.neu.edu.cn/_upload/tpl/02/82/642/template642/images/logo1.png), resized for the page header. |
 | `dist/assets/context-forecast.png` | Original teaching illustration using synthetic electricity demand data. |
+| `dist/assets/same-history-different-futures.png` | User-supplied illustration of a shared observed load and two synthetic next-day forecasts. For background, see [EIA’s analysis of the 2021 Northwest heatwave](https://www.eia.gov/todayinenergy/detail.php?id=48796). |
+| `dist/assets/same-history-different-futures-zh.png` | Simplified Chinese localization of the user-supplied case illustration, produced with ImageGen. |
 | `dist/assets/shenyang-hero.png` | [Official ICDM 2026 homepage](https://icdm2026.neu.edu.cn/); [photograph source](https://icdm2026.neu.edu.cn/_upload/tpl/02/82/642/template642/images/banner4.png). |
 | `dist/assets/research/` | Framework figures supplied by the tutorial team for the showcased papers and systems. Associated paper and project links appear in `dist/research-data.js`. |
 

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Tutorial overview, practical takeaways, and references for the ICDM 2026 tutorial on context-aware time series forecasting with LLMs.">
+  <meta name="description" content="Tutorial overview, case study, and references for the ICDM 2026 tutorial on context-aware time series forecasting with LLMs.">
   <meta property="og:title" content="Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning · ICDM 2026">
   <meta property="og:description" content="November 15, 2026, Shenyang, China.">
   <meta property="og:type" content="website">
   <title>Context-Aware Time Series Forecasting with LLMs: From Pattern Recognition to Cognitive Reasoning | ICDM 2026 Tutorial</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=cc51b29fcb">
+  <link rel="stylesheet" href="style.css?v=d9c8f2339d">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
   <script src="content.js?v=15e268922c" defer></script>
@@ -23,7 +23,7 @@
       <a class="brand" href="#home">
         <img src="assets/icdm-2026-logo.png" width="400" height="146" alt="ICDM 2026 Tutorial">
       </a>
-      <nav class="nav-links" aria-label="Main navigation"><a href="#home">Homepage</a><a href="#news">News</a><a href="#takeaways">Takeaways</a><a href="#schedule">Outline</a><a href="#speakers">Organizers</a><a href="#references">References</a></nav>
+      <nav class="nav-links" aria-label="Main navigation"><a href="#home">Homepage</a><a href="#news">News</a><a href="#schedule">Outline</a><a href="#speakers">Organizers</a><a href="#references">References</a></nav>
       <div class="language-switch" aria-label="Page language"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a><a href="index.html" lang="en" hreflang="en" aria-current="page" aria-label="English version">EN</a></div>
     </div>
   </header>
@@ -38,49 +38,50 @@
     </section>
     <section id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">Overview</h2>
-      <div class="overview-layout">
-        <div class="overview-copy">
-          <p>This tutorial explores advances in context-aware time series forecasting with large language models, moving beyond historical pattern recognition toward context-grounded cognitive reasoning. Real-world forecasts depend on temporal patterns, external conditions, events, domain knowledge, and system states. Using context as <strong>predictive evidence</strong> starts with evaluating what additional features tell us. <strong>What evidence matters, what evidence can we trust, and how can we verify its influence on the future?</strong> The tutorial approaches this question through multimodal semantic understanding, slow-thinking reasoning over evidence, and agentic interaction with tools and environments. It discusses applications in electricity load, renewable power, traffic, industry, and scientific forecasting, and highlights open challenges and future directions.</p>
-        </div>
-        <figure class="forecast-example" aria-labelledby="forecast-title">
-          <h3 id="forecast-title">Forecasting tomorrow’s electricity demand</h3>
-          <p class="forecast-scenario">A grid operator forecasts tomorrow’s electricity demand for the same region under two scenarios. Both forecasts start from the same observed demand.</p>
-          <div class="forecast-plot">
-            <div class="forecast-phases" aria-hidden="true">
-              <span>Past demand</span><span>Tomorrow’s forecast</span>
-            </div>
-            <span class="forecast-axis" aria-hidden="true">Electricity demand</span>
-            <img src="assets/context-forecast.png?v=2" width="1000" height="460" alt="Three forecasts start from the same observed electricity demand. Demand rises on a hot workday, stays roughly flat in the history-only forecast, and falls on a mild-weather holiday.">
-          </div>
-          <ul class="forecast-legend">
-            <li class="legend-workday"><span><strong>Hot workday:</strong> higher demand as cooling use rises.</span></li>
-            <li class="legend-baseline"><span><strong>History only:</strong> roughly flat in this example.</span></li>
-            <li class="legend-holiday"><span><strong>Mild holiday:</strong> lower demand as businesses use less electricity.</span></li>
-          </ul>
-          <figcaption>Illustrative forecasts with synthetic data.</figcaption>
-        </figure>
-      </div>
+      <p>This tutorial explores advances in context-aware time series forecasting with large language models, moving beyond historical pattern recognition toward context-grounded cognitive reasoning. Real-world forecasts depend on temporal patterns, external conditions, events, domain knowledge, and system states. Using context as <strong>predictive evidence</strong> starts with evaluating what additional features tell us. <strong>What evidence matters, what evidence can we trust, and how can we verify its influence on the future?</strong> The tutorial approaches this question through multimodal semantic understanding, slow-thinking reasoning over evidence, and agentic interaction with tools and environments. It discusses applications in electricity load, renewable power, traffic, industry, and scientific forecasting, and highlights open challenges and future directions.</p>
     </section>
-    <section id="takeaways" aria-labelledby="takeaways-title">
-      <h2 id="takeaways-title">How can LLMs use context for forecasting?</h2>
-      <p class="takeaway-intro">Context-aware forecasting involves three connected capabilities: integrating contextual information, reasoning with predictive evidence, and adaptively acquiring additional context when needed.</p>
-      <ol class="takeaway-list">
-        <li>
-          <h3>How can we integrate context?</h3>
-          <p class="takeaway-label">Multimodal Context Integration</p>
-          <p>Connect historical observations with external information, such as weather forecasts, event reports, calendars, and domain knowledge. The challenge is to understand heterogeneous context, align it with the prediction target and horizon, and combine it with temporal patterns—not simply append more inputs.</p>
-        </li>
-        <li>
-          <h3>How can we reason with contextual evidence?</h3>
-          <p class="takeaway-label">Evidence-Grounded Reasoning</p>
-          <p>Identify predictive evidence within the available context and reason about how it may shape future dynamics. This involves assessing the direction, magnitude, and timing of potential effects, weighing competing evidence, and revising forecast hypotheses while accounting for uncertainty.</p>
-        </li>
-        <li>
-          <h3>How can we acquire context adaptively?</h3>
-          <p class="takeaway-label">Adaptive Context Acquisition</p>
-          <p>Determine whether the available evidence is sufficient and what additional information could resolve uncertainty. A forecasting agent can selectively retrieve information, call tools, or request input, then update its reasoning and forecast. Acquisition should respect forecast-time availability and stop when further information is unlikely to justify its cost.</p>
-        </li>
-      </ol>
+    <section id="case" aria-labelledby="case-title">
+      <h2 id="case-title" class="visually-hidden">Same History, Different Futures</h2>
+      <figure class="case-figure">
+        <img src="assets/same-history-different-futures.png" width="1200" height="790" alt="Synthetic electricity demand forecasts share the same history, region, and weekday. The orange 37°C heatwave curve reaches a higher afternoon peak than the blue 27°C normal weekday curve. The figure asks which evidence matters, how it shapes the forecast, and whether the forecast is plausible.">
+        <figcaption>
+          <a href="assets/same-history-different-futures.png">View full-size figure</a>
+          <a href="https://www.eia.gov/todayinenergy/detail.php?id=48796">EIA analysis of cooling demand during a heatwave</a>
+        </figcaption>
+      </figure>
+      <details class="case-text">
+        <summary>Read the case as text</summary>
+        <p>Consider tomorrow’s electricity demand in one region. Both scenarios start from identical historical observations and assume the same weekday conditions. Under normal weather, electricity demand may follow a familiar daily pattern. During a heatwave, increased cooling demand can raise and prolong the afternoon peak.</p>
+        <div class="case-scenarios">
+          <div class="case-scenario case-normal">
+            <h3>Scenario A — Normal Weekday</h3>
+            <p><strong>27°C</strong> maximum temperature</p>
+            <p>Normal cooling demand and a familiar daily load pattern.</p>
+          </div>
+          <div class="case-scenario case-heatwave">
+            <h3>Scenario B — Heatwave Weekday</h3>
+            <p><strong>37°C</strong> maximum temperature</p>
+            <p>Increased cooling demand and a higher, potentially longer afternoon peak.</p>
+          </div>
+        </div>
+        <p class="case-note">Illustrative forecasts based on synthetic data.</p>
+        <h3>Three Key Questions</h3>
+        <p>The forecasting challenge is to identify relevant evidence, explain how it changes the load curve, and verify that the predicted response is reasonable.</p>
+        <dl class="case-questions">
+          <div>
+            <dt>Evidence — What matters?</dt>
+            <dd>Which external information is relevant and trustworthy for forecasting?</dd>
+          </div>
+          <div>
+            <dt>Reasoning — Why and how?</dt>
+            <dd>How does contextual evidence influence the direction, magnitude, and timing of future changes?</dd>
+          </div>
+          <div>
+            <dt>Verification — Can we trust it?</dt>
+            <dd>Does the predicted response agree with the available evidence and known system constraints?</dd>
+          </div>
+        </dl>
+      </details>
     </section>
     <section id="schedule" aria-labelledby="schedule-title">
       <h2 id="schedule-title">Tutorial Outline</h2>

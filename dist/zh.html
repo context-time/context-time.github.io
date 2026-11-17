@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="ICDM 2026 教程「大模型驱动的情境感知时间序列预测」的简介、实践要点和参考文献。">
+  <meta name="description" content="ICDM 2026 教程「大模型驱动的情境感知时间序列预测」的简介、案例和参考文献。">
   <meta property="og:title" content="大模型驱动的情境感知时间序列预测：从模式识别到认知推理 · ICDM 2026">
   <meta property="og:description" content="2026 年 11 月 15 日，中国沈阳。">
   <meta property="og:type" content="website">
   <title>大模型驱动的情境感知时间序列预测：从模式识别到认知推理 | ICDM 2026 教程</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=cc51b29fcb">
+  <link rel="stylesheet" href="style.css?v=d9c8f2339d">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
   <script src="content.js?v=15e268922c" defer></script>
@@ -23,7 +23,7 @@
       <a class="brand" href="#home">
         <img src="assets/icdm-2026-logo.png" width="400" height="146" alt="ICDM 2026 教程">
       </a>
-      <nav class="nav-links" aria-label="主导航"><a href="#home">首页</a><a href="#news">动态</a><a href="#takeaways">要点</a><a href="#schedule">提纲</a><a href="#speakers">组织者</a><a href="#references">参考文献</a></nav>
+      <nav class="nav-links" aria-label="主导航"><a href="#home">首页</a><a href="#news">动态</a><a href="#schedule">提纲</a><a href="#speakers">组织者</a><a href="#references">参考文献</a></nav>
       <div class="language-switch" aria-label="页面语言"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-current="page" aria-label="中文版">中文</a><a href="index.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a></div>
     </div>
   </header>
@@ -38,49 +38,50 @@
     </section>
     <section id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">简介</h2>
-      <div class="overview-layout">
-        <div class="overview-copy">
-          <p>本教程介绍大模型驱动的情境感知时间序列预测的研究进展，探讨如何从历史模式识别走向基于情境的认知推理。现实中的预测受到时间规律、外部条件、事件、领域知识和系统状态的共同影响。要把附加特征用作<strong>预测证据</strong>，需要先判断它们能说明什么。<strong>哪些证据与预测有关，哪些证据值得信赖，又该怎样验证它们对未来的影响？</strong>教程从多模态语义理解、基于证据的慢思考推理，以及智能体与工具和环境的交互三个方面展开，讨论电力负荷、可再生能源发电、交通、工业和科学预测中的应用，以及尚待解决的挑战与研究方向。</p>
-        </div>
-        <figure class="forecast-example" aria-labelledby="forecast-title">
-          <h3 id="forecast-title">预测次日用电需求</h3>
-          <p class="forecast-scenario">电网调度员要预测同一地区次日的用电需求。两种情境都以同一段历史负荷为起点。</p>
-          <div class="forecast-plot">
-            <div class="forecast-phases" aria-hidden="true">
-              <span>历史负荷</span><span>次日预测</span>
-            </div>
-            <span class="forecast-axis" aria-hidden="true">电力负荷</span>
-            <img src="assets/context-forecast.png?v=2" width="1000" height="460" alt="三条预测曲线基于同一段历史电力负荷。高温工作日的预测负荷上升，仅依据历史的预测基本持平，天气温和的假日预测负荷下降。">
-          </div>
-          <ul class="forecast-legend">
-            <li class="legend-workday"><span><strong>高温工作日：</strong>制冷用电增加，预测负荷上升。</span></li>
-            <li class="legend-baseline"><span><strong>仅用历史数据：</strong>本例中预测负荷基本持平。</span></li>
-            <li class="legend-holiday"><span><strong>天气温和的假日：</strong>商业用电减少，预测负荷下降。</span></li>
-          </ul>
-          <figcaption>曲线为合成数据示意。</figcaption>
-        </figure>
-      </div>
+      <p>本教程介绍大模型驱动的情境感知时间序列预测的研究进展，探讨如何从历史模式识别走向基于情境的认知推理。现实中的预测受到时间规律、外部条件、事件、领域知识和系统状态的共同影响。要把附加特征用作<strong>预测证据</strong>，需要先判断它们能说明什么。<strong>哪些证据与预测有关，哪些证据值得信赖，又该怎样验证它们对未来的影响？</strong>教程从多模态语义理解、基于证据的慢思考推理，以及智能体与工具和环境的交互三个方面展开，讨论电力负荷、可再生能源发电、交通、工业和科学预测中的应用，以及尚待解决的挑战与研究方向。</p>
     </section>
-    <section id="takeaways" aria-labelledby="takeaways-title">
-      <h2 id="takeaways-title">大模型如何利用情境信息进行预测？</h2>
-      <p class="takeaway-intro">情境感知预测涉及三项相互关联的能力：整合情境信息、依据预测证据进行推理，以及在需要时自适应地获取更多情境信息。</p>
-      <ol class="takeaway-list">
-        <li>
-          <h3>如何整合情境信息？</h3>
-          <p class="takeaway-label">多模态情境整合</p>
-          <p>将历史观测与天气预报、事件报道、日历和领域知识等外部信息联系起来。整合的关键在于理解不同来源和形式的情境信息，将它们与预测目标和预测时段对齐，再结合时间序列的变化规律进行建模。</p>
-        </li>
-        <li>
-          <h3>如何依据情境证据进行推理？</h3>
-          <p class="takeaway-label">基于证据的推理</p>
-          <p>从可用的情境信息中识别与预测有关的证据，推断它们可能怎样影响未来走势。具体来说，需要判断潜在影响的方向、幅度和时间，权衡指向不同结论的证据，并在考虑不确定性的同时修正预测假设。</p>
-        </li>
-        <li>
-          <h3>如何自适应地获取情境信息？</h3>
-          <p class="takeaway-label">自适应情境获取</p>
-          <p>判断已有证据是否充分，以及哪些补充信息可以减少不确定性。预测智能体可以按需检索资料、调用工具或向用户询问，再更新推理和预测。获取的信息应在作出预测时可得。当继续搜集信息的预期收益不足以抵偿成本时，就应停止。</p>
-        </li>
-      </ol>
+    <section id="case" aria-labelledby="case-title">
+      <h2 id="case-title" class="visually-hidden">相同历史，不同未来</h2>
+      <figure class="case-figure">
+        <img src="assets/same-history-different-futures-zh.png" width="1545" height="1018" alt="图中用合成数据展示同一地区和工作日条件下，从同一段历史负荷出发的两条预测。37°C 热浪情境的橙色曲线比 27°C 正常天气情境的蓝色曲线有更高的下午峰值。图末提出三个问题：哪些证据重要、它们如何影响预测，以及预测结果是否合理。">
+        <figcaption>
+          <a href="assets/same-history-different-futures-zh.png">查看原图</a>
+          <a href="https://www.eia.gov/todayinenergy/detail.php?id=48796">EIA 对热浪期间制冷用电的分析</a>
+        </figcaption>
+      </figure>
+      <details class="case-text">
+        <summary>阅读中文版案例说明</summary>
+        <p>以同一地区的次日用电需求为例，两种情境采用同一段历史观测，并假设次日均为普通工作日。天气正常时，用电负荷可能延续常见的日内变化规律。热浪期间，制冷用电增加，下午的负荷峰值可能升高，高负荷时段也可能延长。</p>
+        <div class="case-scenarios">
+          <div class="case-scenario case-normal">
+            <h3>情境 A · 正常天气下的工作日</h3>
+            <p>最高气温 <strong>27°C</strong></p>
+            <p>制冷需求正常，负荷延续常见的日内变化规律。</p>
+          </div>
+          <div class="case-scenario case-heatwave">
+            <h3>情境 B · 热浪下的工作日</h3>
+            <p>最高气温 <strong>37°C</strong></p>
+            <p>制冷需求增加，下午峰值更高，高负荷时段也可能延长。</p>
+          </div>
+        </div>
+        <p class="case-note">预测曲线基于合成数据，仅用于示意。</p>
+        <h3>三个关键问题</h3>
+        <p>预测的难点在于识别相关证据，解释它如何影响负荷曲线，并验证预测结果是否合理。</p>
+        <dl class="case-questions">
+          <div>
+            <dt>证据 · 什么信息重要？</dt>
+            <dd>哪些外部信息与预测相关，且值得信赖？</dd>
+          </div>
+          <div>
+            <dt>推理 · 影响从何而来？</dt>
+            <dd>情境证据如何影响未来变化的方向、幅度和时间？</dd>
+          </div>
+          <div>
+            <dt>验证 · 预测能否信赖？</dt>
+            <dd>预测结果是否符合现有证据和已知的系统约束？</dd>
+          </div>
+        </dl>
+      </details>
     </section>
     <section id="schedule" aria-labelledby="schedule-title">
       <h2 id="schedule-title">教程提纲</h2>
