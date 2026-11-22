@@ -20,9 +20,10 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-of
 .language-switch a[aria-current=page]{background:#edf0f4;color:var(--ink);font-weight:600}
 main>section{padding-block:var(--section-space);border-bottom:1px solid var(--line);scroll-margin-top:12px}
 main>.intro{padding-top:24px}
-h1{margin:0 0 12px;font-size:34px;line-height:1.24;letter-spacing:-.025em;font-weight:650;text-wrap:balance}
+h1{margin:0 0 12px;font-size:32px;line-height:1.24;letter-spacing:-.025em;font-weight:650;text-wrap:balance}
+html[lang=en] h1{text-align:justify;text-align-last:start;text-wrap:wrap}
 @media(min-width:1050px){
-  html[lang=en] h1{font-size:40px}
+  html[lang=en] h1{font-size:36px}
 }
 .event-details{display:flex;flex-wrap:wrap;gap:4px 18px;margin:0;color:var(--muted);font-size:var(--detail-size)}
 h2{margin:0 0 10px;font-size:22px;line-height:1.35;font-weight:600;letter-spacing:-.02em}
@@ -73,13 +74,13 @@ html[lang=zh-CN] h1 span{display:inline-block}
   .header-inner{grid-template-columns:1fr auto;grid-template-areas:"brand language" "nav nav";gap:0 12px;padding-block:5px}
   .brand img{width:136px}
   .nav-links{gap:4px 17px;font-size:14px}
-  main>.intro{padding-top:20px}h1{font-size:29px}
+  main>.intro{padding-top:20px}h1{font-size:27px}
   #overview>p:lang(en){text-align:start;hyphens:manual}
   html[lang=zh-CN] h1{font-size:29px}
 }
 @media(max-width:560px){
   :root{--text-size:14px;--section-space:16px}
-  h1{font-size:27px}.event-details{flex-direction:column;gap:2px;font-size:12px}
+  h1{font-size:25px}.event-details{flex-direction:column;gap:2px;font-size:12px}
   h2{font-size:20px;margin-bottom:10px}
   .case-scenarios,.case-questions{grid-template-columns:1fr;gap:8px}
   .speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}

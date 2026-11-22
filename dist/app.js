@@ -1,6 +1,10 @@
 (() => {
   const data = window.TUTORIAL;
   const chinese = document.documentElement.lang.startsWith('zh');
+  const caseText = document.querySelector('.case-text');
+  if (caseText && window.matchMedia('(max-width: 560px)').matches) {
+    caseText.open = true;
+  }
   const make = (tag, className, text) => {
     const node = document.createElement(tag);
     if (className) node.className = className;

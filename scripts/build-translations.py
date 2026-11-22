@@ -27,7 +27,7 @@ translations = {
     'November 15, 2026': '2026 年 11 月 15 日',
     '>Wanda Vista Shenyang<': '>沈阳富力万达文华酒店<',
     '>News<': '>动态<',
-    'The tutorial slides will be publicly available on this page soon.': '本教程的幻灯片即将在此页面公开。',
+    'Thank you for joining our tutorial at ICDM 2026!': '感谢大家参加我们在 ICDM 2026 举办的教程！',
     (
         'This tutorial explores advances in context-aware time series forecasting with large language models, moving beyond '
         'historical pattern recognition toward context-grounded cognitive reasoning. Real-world forecasts depend on temporal '
@@ -88,8 +88,6 @@ translations = {
     '>Tutorial Outline<': '>教程提纲<',
     '>Outline<': '>提纲<',
     '>References<': '>参考文献<',
-    'Add to calendar': '添加到日历',
-    'assets/tutorial.ics': 'assets/tutorial-zh.ics',
     '>Conference<': '>会议官网<',
     '>Contact<': '>联系团队<',
     'ICDM 2026 · Shenyang': 'ICDM 2026 · 沈阳',
