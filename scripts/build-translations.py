@@ -27,6 +27,7 @@ translations = {
     'November 15, 2026': '2026 年 11 月 15 日',
     '>Wanda Vista Shenyang<': '>沈阳富力万达文华酒店<',
     '>News<': '>动态<',
+    'Tutorial slides are now available for <a href="#slides">online preview and download</a>.': '教程 Slides 已开放<a href="#slides">在线预览和下载</a>。',
     'Our survey on context-aware time series forecasting will be released soon.': '我们的情境感知时间序列预测 Survey 即将公布。',
     'Thank you for joining our tutorial at ICDM 2026!': '感谢大家参加我们在 ICDM 2026 举办的教程！',
     (
