@@ -10,7 +10,7 @@ import re
 
 root = Path(__file__).resolve().parents[1] / 'dist'
 source = (root / 'index.html').read_text()
-for asset in ['style.css', 'content.js', 'app.js']:
+for asset in ['style.css', 'content.js', 'app.js', 'slides.css', 'slides.js']:
     version = hashlib.sha256((root / asset).read_bytes()).hexdigest()[:10]
     source = re.sub(r'(?P<attr>href|src)="' + re.escape(asset) + r'(?:\?v=[^"]*)?"', lambda match: match.group('attr') + '="' + asset + '?v=' + version + '"', source)
 (root / 'index.html').write_text(source)
@@ -88,6 +88,18 @@ translations = {
     '>Tutorial Outline<': '>教程提纲<',
     '>Outline<': '>提纲<',
     '>References<': '>参考文献<',
+    '>Slides<': '>课件<',
+    '>Open PDF<': '>打开 PDF<',
+    '>Download PDF (21.4 MB)<': '>下载 PDF（21.4 MB）<',
+    '>Previous<': '>上一页<',
+    '>Page<': '>页码<',
+    '>Go<': '>跳转<',
+    '>Next<': '>下一页<',
+    '>Zoom in<': '>放大<',
+    'aria-label="Slide preview"': 'aria-label="课件预览"',
+    'aria-label="Tutorial slide"': 'aria-label="教程课件"',
+    'alt="Tutorial title slide"': 'alt="教程标题页"',
+    'Open or download the PDF to read all 101 slides.': '打开或下载 PDF，阅读全部 101 页课件。',
     '>Conference<': '>会议官网<',
     '>Contact<': '>联系团队<',
     'ICDM 2026 · Shenyang': 'ICDM 2026 · 沈阳',

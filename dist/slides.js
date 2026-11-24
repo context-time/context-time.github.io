@@ -1,6 +1,8 @@
 (() => {
   const reader = document.querySelector('#slides');
-  const total = 104;
+  if (!reader) return;
+  const total = Number(reader.dataset.total);
+  const previewPath = reader.dataset.previewPath;
   const isChinese = document.documentElement.lang === 'zh-CN';
   const copy = isChinese ? {
     total: `共 ${total} 页`,
@@ -71,7 +73,7 @@
       retry.addEventListener('click', () => show(current));
       status.append(retry);
     };
-    picture.src = `assets/slides/2026-11-14/${String(current).padStart(3, '0')}.webp`;
+    picture.src = `${previewPath}/${String(current).padStart(3, '0')}.webp`;
   }
 
   if (!context) {
@@ -93,7 +95,6 @@
     zoom.textContent = active ? copy.zoomOut : copy.zoomIn;
     if (!active) viewport.scrollTo(0, 0);
   });
-  canvas.addEventListener('contextmenu', (event) => event.preventDefault());
   viewport.addEventListener('keydown', (event) => {
     if (viewport.classList.contains('is-zoomed')) return;
     const pages = {ArrowLeft: current - 1, ArrowRight: current + 1, Home: 1, End: total};

@@ -11,10 +11,12 @@
   <title>大模型驱动的情境感知时间序列预测：从模式识别到认知推理 | ICDM 2026 教程</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=449ed3e782">
+  <link rel="stylesheet" href="slides.css?v=ec2cbb7ad7">
   <link rel="alternate" hreflang="en" href="index.html">
   <link rel="alternate" hreflang="zh-CN" href="zh.html">
   <script src="content.js?v=15e268922c" defer></script>
   <script src="app.js?v=786dc38ef8" defer></script>
+  <script src="slides.js?v=614a9a9146" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#news">跳至正文</a>
@@ -23,7 +25,7 @@
       <a class="brand" href="#home">
         <img src="assets/icdm-2026-logo.png" width="400" height="146" alt="ICDM 2026 教程">
       </a>
-      <nav class="nav-links" aria-label="主导航"><a href="#home">首页</a><a href="#news">动态</a><a href="#schedule">提纲</a><a href="#speakers">组织者</a><a href="#references">参考文献</a></nav>
+      <nav class="nav-links" aria-label="主导航"><a href="#home">首页</a><a href="#news">动态</a><a href="#schedule">提纲</a><a href="#speakers">组织者</a><a href="#slides">课件</a><a href="#references">参考文献</a></nav>
       <div class="language-switch" aria-label="页面语言"><a href="zh.html" lang="zh-CN" hreflang="zh-CN" aria-current="page" aria-label="中文版">中文</a><a href="index.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a></div>
     </div>
   </header>
@@ -90,6 +92,37 @@
     <section id="speakers" aria-labelledby="speakers-title">
       <h2 id="speakers-title">教程组织者</h2>
       <div class="speaker-grid" id="speaker-grid"></div>
+    </section>
+    <section class="reader" id="slides" aria-labelledby="slides-title" data-total="101" data-preview-path="assets/slides/2026-11-24">
+      <div class="reader-heading">
+        <h2 id="slides-title">课件</h2>
+        <div class="reader-downloads">
+          <a href="assets/ICDM2026_Tutorial_PartIV_Revised.pdf" target="_blank" rel="noopener noreferrer">打开 PDF</a>
+          <a href="assets/ICDM2026_Tutorial_PartIV_Revised.pdf" download>下载 PDF（21.4 MB）</a>
+        </div>
+      </div>
+      <form class="reader-controls" id="reader-controls" hidden>
+        <div class="reader-pagination">
+          <button type="button" id="reader-prev">上一页</button>
+          <label for="reader-page">页码</label>
+          <input id="reader-page" type="number" min="1" max="101" value="1" required inputmode="numeric" aria-describedby="reader-total">
+          <span id="reader-total"></span>
+          <button type="submit">跳转</button>
+          <button type="button" id="reader-next">下一页</button>
+        </div>
+        <button type="button" id="reader-zoom" aria-pressed="false">放大</button>
+      </form>
+      <div class="reader-viewport" id="reader-viewport" role="region" aria-label="课件预览" tabindex="0">
+        <canvas id="reader-slide" width="1600" height="900" role="img" aria-label="教程课件">
+          <img src="assets/slides/2026-11-24/001.webp" width="1600" height="900" alt="教程标题页" loading="lazy">
+        </canvas>
+      </div>
+      <p id="reader-status" class="reader-status" role="status"></p>
+      <noscript>
+        <style>.reader-viewport{display:none}</style>
+        <img class="reader-fallback" src="assets/slides/2026-11-24/001.webp" width="1600" height="900" alt="教程标题页" loading="lazy">
+        <p>打开或下载 PDF，阅读全部 101 页课件。</p>
+      </noscript>
     </section>
     <section id="materials" aria-labelledby="references">
       <h2 id="references">参考文献</h2>

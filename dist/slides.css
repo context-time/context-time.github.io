@@ -1,3 +1,30 @@
+.reader-heading,
+.reader-downloads {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.reader-heading {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.reader-heading h2 {
+  margin: 0;
+}
+
+.reader-downloads {
+  font-size: 14px;
+}
+
+.reader-fallback {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .reader-controls,
 .reader-pagination {
   display: flex;
